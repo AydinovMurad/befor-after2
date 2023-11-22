@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #0E183E;
+}
+
+.container {
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    background: #FFF;
+    color: #0E183E;
+    padding: 25px 35px;
+}
+.subject-area {
+    width: 300px;
+    height: 15px;
+    background-color: #C3CDE9;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid black;
+}
+.subject-area::after {
+    content: "";
+    width: 52%;
+    height: calc(100% - 1px);
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    border: inherit;
+}
+.subject:nth-child(1) .subject-area::after {
+    background-color: #FC9860;
+    width: 52%;
+}
+.subject:nth-child(2) .subject-area::after {
+    background-color: #608CFC;
+    width: 76%;
+}
+.subject:nth-child(3) .subject-area::after {
+    background-color :#FC6086;
+    width: 21%;
+}
